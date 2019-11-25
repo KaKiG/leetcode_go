@@ -29,6 +29,7 @@ func maxPathSum(root *TreeNode) int {
 
 func solver(root *TreeNode, max *int) int {
 	if root == nil {
+		cmd
 		return 0
 	}
 	right := max2(0, solver(root.Right, max))
