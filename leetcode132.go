@@ -8,14 +8,14 @@ func main() {
 }
 
 func minCut(s string) int {
-	n := len(s)
-	dp := make([][]bool, n)
+	length := len(s)
+	dp := make([][]bool, length)
 	for k := range dp {
-		dp[k] = make([]bool, n)
+		dp[k] = make([]bool, length)
 	}
 
-	cut := make([]int, n)
-	for j := 0; j < n; j++ {
+	cut := make([]int, length)
+	for j := 0; j < length; j++ {
 		cut[j] = j
 		for i := 0; i <= j; i++ {
 			if s[i] == s[j] && (j-i <= 1 || dp[i+1][j-1]) {
@@ -28,7 +28,7 @@ func minCut(s string) int {
 			}
 		}
 	}
-	return cut[n-1]
+	return cut[length-1]
 }
 
 func min(a, b int) int {
