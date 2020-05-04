@@ -1,2 +1,6 @@
 /.vscode
+<<<<<<< HEAD
 /cpp/*exe
+=======
+/cpp/*.exe
+>>>>>>> 862b5cfdf346726e68e107d457e6b4035bcaa528
